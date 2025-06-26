@@ -1,0 +1,4 @@
+technology,location,investment_cost,variable_cost,unit_capacity,ramping_rate
+Coal,GER,33.75,0.15,400,0.4
+Oil,BEL,24.16666667,0.2,100,0.9
+Oil,GER,24.16666667,0.2,100,0.9

@@ -1,0 +1,6 @@
+location,technology,capacity,units
+AUS,Oil,11700.0,117
+AUS,SunPV,46350.0,927
+GER,Oil,67500.0,675
+GER,SunPV,176300.0,3526
+NED,SunPV,248650.0,4973

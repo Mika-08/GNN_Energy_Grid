@@ -1,0 +1,4 @@
+technology,location,investment_cost,variable_cost,unit_capacity,ramping_rate
+Oil,GER,24.16666667,0.2,100,0.9
+SunPV,GER,24.0,0.0001,50,1.0
+SunPV,NED,24.0,0.0001,50,1.0

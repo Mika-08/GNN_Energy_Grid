@@ -1,0 +1,5 @@
+from,to,export_capacity,import_capacity
+AUS,BLK,1686,1746
+AUS,CZE,900,900
+BLK,SKO,1800,2600
+CZE,SKO,1952,1600

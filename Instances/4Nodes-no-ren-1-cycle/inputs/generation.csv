@@ -1,0 +1,6 @@
+technology,location,investment_cost,variable_cost,unit_capacity,ramping_rate
+Coal,CZE,33.75,0.15,400,0.4
+Coal,SKO,33.75,0.15,400,0.4
+Oil,AUS,24.16666667,0.2,100,0.9
+Oil,BLK,24.16666667,0.2,100,0.9
+Oil,SKO,24.16666667,0.2,100,0.9

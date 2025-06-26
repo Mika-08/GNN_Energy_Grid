@@ -1,0 +1,7 @@
+location,technology,capacity,units
+AUS,Oil,9800.0,98
+AUS,SunPV,23500.0,470
+BLK,Oil,32700.0,327
+BLK,SunPV,108500.0,2170
+CZE,SunPV,59600.0,1192
+SKO,Oil,6800.0,68

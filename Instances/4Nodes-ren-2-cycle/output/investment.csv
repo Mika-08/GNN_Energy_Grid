@@ -1,0 +1,6 @@
+location,technology,capacity,units
+DEN,Oil,12500.0,125
+GER,Oil,68500.0,685
+GER,SunPV,196850.0,3937
+NED,SunPV,236050.0,4721
+SWE,SunPV,182850.0,3657

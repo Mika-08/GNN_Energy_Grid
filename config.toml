@@ -1,0 +1,23 @@
+[input.data]
+# input directory with the files
+dir = "Instances/4Nodes-ren-1-cycle/inputs"
+demand = "demand.csv"
+generation_availability = "generation_availability.csv"
+generation = "generation.csv"
+transmission_lines = "transmission_lines.csv"
+scalars = "scalars.toml"
+
+[input.sets]
+time_steps = "auto"
+# time_steps = [1,2,3]
+locations = "auto"
+transmission_lines = "auto"
+generators = "auto"
+
+[output]
+dir = "Instances/4Nodes-ren-1-cycle/output"
+investment = "investment.csv"
+production = "production.csv"
+line_flow = "line_flow.csv"
+loss_of_load = "loss_of_load.csv"
+scalars = "scalars.toml"

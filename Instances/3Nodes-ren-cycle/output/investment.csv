@@ -1,0 +1,6 @@
+location,technology,capacity,units
+BEL,Oil,12000.0,120
+BEL,SunPV,17100.0,342
+GER,Oil,69900.0,699
+GER,SunPV,190100.0,3802
+NED,SunPV,206000.0,4120
