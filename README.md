@@ -85,3 +85,16 @@ $$\begin{aligned}
 Run the python file **src/GraphBuilder.py** which generates graph and stores a **SimpleGridGraph.pt** file and a **index_to_name.json** file (contains which index maps to which location)
 
 Current graph is a simple directed graph generated from the**transmission_lines.csv** file with edge weight as the capacity.
+
+# Instruction to run the Code
+## GNN
+Set the path in the HeteroGNN.py file to the folder containing the instance. Then run
+```bash
+python3 HeteroGNN.py
+```
+
+## MLP
+Set the path in MLP.py to the folder containing the instance. Then run
+```bash
+python3 MLP.py
+```

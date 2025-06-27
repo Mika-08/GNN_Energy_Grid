@@ -177,7 +177,6 @@ class HeteroGNN(torch.nn.Module):
         self.demand_lin = nn.Linear(self.hidden_channels, 1)  # final regression or classification head
         self.flow_lin = nn.Sequential(
             nn.Linear(hidden_channels, 1),
-            # nn.Tanh()
         )
 
     def make_first_layer(self):
@@ -619,17 +618,14 @@ def evaluate_model(base_path, model_path, training_time):
             flow_as_first_index = - pred_flow[incoming_index].sum() if incoming_index else 0.0
             flow_as_second_index = pred_flow[outgoing_index].sum() if outgoing_index else 0.0
             total_prod = pred_prod[prod_index].sum()
-            # print(f"--- flow_as_first_index: {flow_as_first_index}, flow_as_second_index: {flow_as_second_index}, total_prod: {total_prod}")
-            # print("--------------------------------")
             # Find production that belongs to this location loc_node,
             lhs = total_prod + flow_as_first_index + flow_as_second_index # minus incoming because if its import, production should be negative
             rhs = demand_feat[loc]
             e_i = rhs - lhs
             loss_of_load.append(e_i.item())
-        loss_of_load = torch.tensor(loss_of_load).unsqueeze(1)  # -> shape (N_demand, 1)
+        loss_of_load = torch.tensor(loss_of_load).unsqueeze(1) 
 
             
-        # print(f"Loss of load: {loss_of_load.shape}")
         # remove all singleton dimensions and move to numpy
         prod = pred_prod.squeeze(-1).detach().cpu().numpy()  # -> shape (N_tech,)
         prod_gt = gt_prod.squeeze(-1).detach().cpu().numpy()  # -> shape (N_tech,)
@@ -710,7 +706,7 @@ if __name__ == "__main__":
 
     '''
     base_path = "Instances/4Nodes-ren-1-cycle"
-    # report = Report(loss_cost=3)
+
     training_time = main(base_path,
          learning_rate=0.01,
          hidden_channels= 32,
@@ -725,8 +721,6 @@ if __name__ == "__main__":
          save_model = True,
          save_path= "../",
          save_model_name = "GNNModel-3Nodes-ren")
-    # test_base_path = "../my_test_data/small_instance3"
-    # test_base_path2 = "instances/4Nodes-ren-no-cycle"
-    # print(f"##############EVALUATION TIME: {training_time:.4f} seconds#################")
+
     base_path = "Instances/4Nodes-ren-1-cycle"
     evaluate_model(base_path, "../GNNModel-3Nodes-ren.pt", training_time)
